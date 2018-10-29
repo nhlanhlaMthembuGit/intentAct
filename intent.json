@@ -1,0 +1,35 @@
+{
+    
+    "intent" : [
+ 
+            {
+                "action":"Airtime",
+                "sub_menu":["R10", "R30"]
+            },
+            {
+                "action":"Data",
+                "sub_menu":[ {"menuItem":"RushHour" , "callbackData" :"dataRushHourR5"}, { "menuItem": "Daily"} , "Weekly" , "Monthly"],
+                "RushHour":["1hour 15MB(R2)", "1Hour 50mb(R5)" , "1Hour 150MB(R12)", "1Hour 1GB(R30)"],
+                "Daily":["5MB(R2)", "10mb(R5)" , "20MB(R12)", "500mb(R30)"],
+                "Weekly":["15MB(R5)", "50mb(R10)" , "150MB(R15)", "250(R30)"],
+                "Monthly":["150MB(R10)", "250mb(R20)" , "500MB(R50)", "1GB(R150)"]
+            },
+                
+            {
+                "action":"Social Bundles",
+                "sub_menu":["Youtube","WhatsApp","Twitter","Facebook"],
+                "Youtube":["1day 100MB(R5)","7day 500MB(R25)","30day 1GB(R30)"],
+                "WhatsApp":["1day 100MB(R5)","7day 500MB(R25)","30day 1GB(R30)"],
+                "Twitter":["1day 100MB(R5)","7day 500MB(R25)","30day 1GB(R30)"],
+                "Facebook":["1day 100MB(R5)","7day 500MB(R25)","30day 1GB(R30)"]
+            },
+            {
+                "action":"Call center",
+                "sub_menu":["Puk number", "Internet Settings"]
+            }
+ 
+    ]
+
+ }
+
+ 
