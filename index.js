@@ -7,6 +7,8 @@ var fileName = 'intent.json'
 
 function getIntentAction(intentAction)
 {
+    
+    // getMenuItem('R10')
     //Loop through the Menu Options/intent actions
     jsonFile.readFile(fileName, function(err, jsonData) {
 
@@ -40,9 +42,6 @@ function getIntentAction(intentAction)
 
             }else if(jsonData.intent[1].sub_menu[i]=='Daily')
             {
-
-
-                
                 console.log("");
                 console.log(jsonData.intent[1].sub_menu[i]);
                for(let x = 0; x< jsonData.intent[1].Daily.length; x++)
@@ -61,8 +60,6 @@ function getIntentAction(intentAction)
                 console.log(jsonData.intent[1].Weekly[x]);
 
                }
-
-
             }else if(jsonData.intent[1].sub_menu[i]=='Monthly')
             {
 
@@ -74,9 +71,7 @@ function getIntentAction(intentAction)
 
                }
 
-
             }
-
 
            }
 
@@ -156,7 +151,58 @@ function getIntentAction(intentAction)
 
   
     });
+
    
 }
+getIntentAction("Airtime");
 
-getIntentAction("Call center");
+//Test Function====
+
+
+function getMenuItem(menuItems, callBackData)
+    {
+
+        console.log("hhdhdhdh");
+        jsonFile.readFile(fileName, function(jsonData){
+
+
+            if(menuItems == 'RushHour')
+            {
+
+                if(callBackData == 'dataRushHourR2' || callBackData == 'dataRushHourR5' || callBackData == 'dataRushHourR12'|| callBackData == 'dataRushHourR30')
+                {
+                    console.log(jsonData.menuItems);
+                }
+            }
+            else if(menuItems == 'Daily')
+            {
+                if(callBackData == 'dailyR2' || callBackData == 'dailyR5' || callBackData == 'dailyR12'|| callBackData == 'dailyR30')
+                {
+                    console.log(jsonData.menuItems);
+                }
+            }   
+        //     for(let i = 0; i< jsonData.sub_menu.length;i++)
+        //     {
+                
+        //         console.log(jsonData);
+        //         if(jsonData.intent[1].sub_menu[i]== menuItems)
+        //     {
+
+        //            console.log("");
+        //             console.log(jsonData.intent[1].sub_menu[i]);
+        //            for(let x = 0; x< jsonData.intent[1].RushHour.length; x++)
+        //            {
+        //             console.log(jsonData.intent[1].RushHour[x]);
+
+        //            }
+        //     }
+        // }
+                
+                
+
+            
+            
+        })
+    }
+    getMenuItem('RushHour')
+
