@@ -162,25 +162,97 @@ getIntentAction("Airtime");
 function getMenuItem(menuItems, callBackData)
     {
 
-        console.log("hhdhdhdh");
         jsonFile.readFile(fileName, function(jsonData){
 
-
-            if(menuItems == 'RushHour')
+            for(let i =0; i < jsonData.intent[0].sub_menu.length; i++)
             {
-
-                if(callBackData == 'dataRushHourR2' || callBackData == 'dataRushHourR5' || callBackData == 'dataRushHourR12'|| callBackData == 'dataRushHourR30')
+                if(menuItems == 'RushHour')
                 {
-                    console.log(jsonData.menuItems);
+                    if(callBackData == 'dataRushHourR2')
+                    {   
+                        console.log("");
+                        console.log(jsonData.intent[0].sub_menu[i]);
+                    }
+
+                        
+                        console.log("");
+                        console.log(jsonData.intent[0].sub_menu[i]);
                 }
+                else if(menuItems == "RushHour")
+                {
+                    if(callBackData == "dataRushHourR5")
+                    {
+                        console.log("");
+                        console.log(jsonData.intent[1].sub_menu[i]);
+
+                    }
+
+                        console.log("");
+                        console.log(jsonData.intent[1].sub_menu[i]);
+                }
+                else if(menuItems == "RushHour")
+                {
+                    if(callBackData == "dataRushHourR12")
+                    {
+                        console.log("");
+                        console.log(jsonData.intent[2].sub_menu[i]);
+                    }
+
+                        console.log("");
+                        console.log(jsonData.intent[2].sub_menu[i]);
+                }
+                else if(menuItems == "RushHour")
+                {
+                    if(callBackData == "dataRushHourR30")
+                    {
+                        console.log("");
+                        console.log(jsonData.intent[2].sub_menu[i])
+                    }
+
+                        console.log("")
+                        console.log(jsonData.intent[2].sub_menu[i]);
+
+                }
+                //For loop for Daily
+                for(let x =0; x < jsonData.intent[1].sub_menu.length;x++)
+                {
+                    if(menuItems == "Daily")
+                    {
+                        if(callBackData == "dailyR2")
+                        {
+                            console.log("")
+                            console.log(jsonData.intent[1].sub_menu[x])
+                        }
+
+                            console.log("")
+                            console.log(jsonData.intent[1].sub_menu[x])
+                    }
+                    else if(menuItems == "Daily")
+                    {
+                        if(callBackData == "dailyR5")
+                        {
+                            
+                        }
+                    }
+
+                }
+
             }
-            else if(menuItems == 'Daily')
-            {
-                if(callBackData == 'dailyR2' || callBackData == 'dailyR5' || callBackData == 'dailyR12'|| callBackData == 'dailyR30')
-                {
-                    console.log(jsonData.menuItems);
-                }
-            }   
+            // if(menuItems == 'RushHour')
+            // {
+
+            //     if(callBackData == 'dataRushHourR2' || callBackData == 'dataRushHourR5' || callBackData == 'dataRushHourR12'|| callBackData == 'dataRushHourR30')
+            //     {
+            //         console.log(jsonData.menuItems);
+            //     }
+            // }
+            // else if(menuItems == 'Daily')
+            // {
+            //     if(callBackData == 'dailyR2' || callBackData == 'dailyR5' || callBackData == 'dailyR12'|| callBackData == 'dailyR30')
+            //     {
+            //         console.log(jsonData.menuItems);
+            //     }
+            // }   
         //     for(let i = 0; i< jsonData.sub_menu.length;i++)
         //     {
                 
